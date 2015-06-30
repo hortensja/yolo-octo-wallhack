@@ -1,7 +1,7 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="SwietnyProjektNaGitHubie.About" %>
+﻿<%@ Page Title="Świetny projekt na piąteczkę" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="SwietnyProjektNaGitHubie.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
-    <h3>Your application description page.</h3>
-    <p>Use this area to provide additional information.</p>
+    <h2><span style="color: hotpink" ><%: Title %></span></h2>
+    <h3>Wasza Eminencjo, trafiłeś na doskonałą stronę!</h3>
+    <p></p>
 </asp:Content>
