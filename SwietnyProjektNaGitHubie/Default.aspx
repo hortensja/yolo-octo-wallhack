@@ -42,6 +42,7 @@
 
         <div class="col-md-4">
              <p>
+                 <br />
             <asp:ListBox ID="ListBox2" runat="server" BackColor="#9999FF" Font-Names="Verdana" Font-Size="Small">
                 <asp:ListItem>Powód 1</asp:ListItem>
                 <asp:ListItem>Powód 2</asp:ListItem>
@@ -75,21 +76,42 @@
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
+            <h2><span style="color: hotpink">Możesz też wybrać mail poniżej</span></h2>
             <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                    <asp:ListItem Value="hortensja.p@gmail.com">hortensja</asp:ListItem>
+                    <asp:ListItem Value="treemasterwizard@gmail.com">Tree Master Wizard</asp:ListItem>
+                    <asp:ListItem Value="przedmioty.jasik@gmail.com">ta opcja spamuje</asp:ListItem>
+                    <asp:ListItem Value="cichowskaj@gmail.com">hortensja, tylko oficjalnie</asp:ListItem>
+                    <asp:ListItem Value="tkunikowska@gmail.com">Babuszka</asp:ListItem>
+                </asp:RadioButtonList>
             </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
+            <h4><span style="color: hotpink">(ciąg dalszy obok...)</span></h4>
+          
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
+              <h4><span style="color: hotpink">...oraz się zalogować do gmaila</span></h4>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                <asp:Label ID="Label3" runat="server" Text="Login    "></asp:Label>
+                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:Button ID="Button3" runat="server" Text="dodaj @gmail.com" OnClick="Button3_Click" />
+                <br /> <br />
+                <asp:Label ID="Label4" runat="server" Text="Hasło    " ToolTip="nie bawimy się w jakieś tam gwiazdki" BorderStyle="Dotted" BorderWidth="1"></asp:Label>
+                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            </p>
+                <h4><span style="color: hotpink">a tu wpisz wiadomość</span></h4>
+              <p>
+                  <asp:TextBox ID="TextBox4" runat="server" Rows="8" BorderStyle="Double" MaxLength="10000" TextMode="MultiLine" Width="333px"></asp:TextBox>
+              </p>
+            <p>
+                
+                <asp:Button ID="Button2" runat="server" Text="Wyślij &raquo;" OnClick="Button2_Click" />
+                
             </p>
             <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                
+                <asp:Label ID="Label2" runat="server" BackColor="HotPink"></asp:Label>
+                
             </p>
         </div>
     </div>

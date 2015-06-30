@@ -163,7 +163,7 @@ button,
 input,
 select,
 textarea {
-  margin: 0;
+  margin: 0 0 0 1px;
   font-family: inherit;
   font-size: 100%;
 }
@@ -4946,7 +4946,7 @@ a.list-group-item.active > .badge,
 
 .jumbotron p {
   line-height: 1.4;
-    width: 284px;
+    width: 346px;
 }
 
 .container .jumbotron {

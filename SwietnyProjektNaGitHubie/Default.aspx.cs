@@ -25,12 +25,11 @@ namespace SwietnyProjektNaGitHubie
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var fromAddress = new MailAddress("swietnyprojekt@gmail.com");//, "Hortensja");
+            var fromAddress = new MailAddress("swietnyprojekt@gmail.com");
             var toAddress = new MailAddress(TextBox1.Text, "Szanowny Gość");
             const string fromPassword = "yoloyolo";
             const string subject = "Wiadomość ze świetnej strony";
-
-
+            
 
             string wiadomosc = "Dzień dobry, Wasza ";
 
@@ -132,6 +131,7 @@ namespace SwietnyProjektNaGitHubie
             try
             {
                 smtp.Send(message);
+            Label1.Text = "Wysłano maila, Wasza Dostojność!";
             }
             catch
             {
@@ -139,13 +139,55 @@ namespace SwietnyProjektNaGitHubie
             }
 
 
-
-
-
-            Label1.Text = "Wysłano maila, Wasza Dostojność!";
         }
 
-       
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            var fromAddress = new MailAddress(TextBox2.Text);
+            string fromPassword = TextBox3.Text;
+
+
+            const string subject = "Wiadomość ze świetnej strony";
+
+            string wiadomosc = TextBox4.Text;
+
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                // UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            };
+
+                
+                var toAddress = new MailAddress(RadioButtonList1.SelectedValue, "Szanowny Gość");
+
+                using (var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = wiadomosc
+                })
+                    try
+                    {
+                        smtp.Send(message);
+                        Label2.Text = "Wysłano maila, Wasza Dostojność!";
+                    }
+                    catch
+                    {
+
+                        Label2.Text = "Nastąpił fail, Wasza Dostojność!";
+                    }
+
+            
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            TextBox2.Text += "@gmail.com";
+        }
 
         
     }
