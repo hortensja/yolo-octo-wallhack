@@ -97,7 +97,7 @@
                 <asp:Button ID="Button3" runat="server" Text="dodaj @gmail.com" OnClick="Button3_Click" />
                 <br /> <br />
                 <asp:Label ID="Label4" runat="server" Text="Hasło    " ToolTip="nie bawimy się w jakieś tam gwiazdki" BorderStyle="Dotted" BorderWidth="1"></asp:Label>
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox3" runat="server" Width="171px"></asp:TextBox>
             </p>
                 <h4><span style="color: hotpink">a tu wpisz wiadomość</span></h4>
               <p>

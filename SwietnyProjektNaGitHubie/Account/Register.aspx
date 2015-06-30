@@ -1,13 +1,13 @@
-﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="SwietnyProjektNaGitHubie.Account.Register" %>
+﻿<%@ Page Title="tu naprawdę nic nie ma" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="SwietnyProjektNaGitHubie.Account.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+    <h2><span style="color: hotpink" ><%: Title %></span></h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
 
     <div class="form-horizontal">
-        <h4>Create a new account</h4>
+        <h4>lalala</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
         <div class="form-group">

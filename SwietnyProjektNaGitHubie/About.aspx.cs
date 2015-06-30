@@ -21,7 +21,7 @@ namespace SwietnyProjektNaGitHubie
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            TextBox1.Text += "Specjalnie dziękuję Autorowi dzieła!\n";
+            TextBox1.Text += "Specjalnie najmocniej dziękuję Autorowi dzieła!\n";
             TextBox1.Rows++;
         }
     }
